@@ -36,8 +36,8 @@ public class stringCalcTest{
             fail("Didn't throw error for first arg = -1");
         }
         catch(IllegalArgumentException expected){
-            if(expected.getMessage() != "Negatives not allowed: -1")
-                fail("Wrong error thrown for first arg = -1");
+            if(!expected.getMessage().contains("Negatives not allowed: -1"))
+                fail(expected.getMessage());
         }
     }
 }

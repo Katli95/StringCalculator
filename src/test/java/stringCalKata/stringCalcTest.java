@@ -23,6 +23,6 @@ public class stringCalcTest{
     }
     @Test
     public void testCommaAndNewline(){
-        assertEquals(36, stringCalc.add("1/n2,3"));
+        assertEquals(6, stringCalc.add("1\n2,3"));
     }
 }

@@ -17,4 +17,8 @@ public class stringCalcTest{
     public void testTwoArguments(){
         assertEquals(3, stringCalc.add("1,2"));
     }
+    @Test
+    public void testManyArguments(){
+        assertEquals(36, stringCalc.add("1,2,3,4,5,6,7,8"));
+    }
 }

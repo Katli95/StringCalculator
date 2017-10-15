@@ -21,4 +21,8 @@ public class stringCalcTest{
     public void testManyArguments(){
         assertEquals(36, stringCalc.add("1,2,3,4,5,6,7,8"));
     }
+    @Test
+    public void testCommaAndNewline(){
+        assertEquals(36, stringCalc.add("1/n2,3"));
+    }
 }

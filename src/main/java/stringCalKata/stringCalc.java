@@ -2,7 +2,15 @@ package stringCalKata;
 
 public class stringCalc{
     public static int add(String numbers){
-        return 1;
+        if(numbers == ""){
+            return 0;
+        }
+        String[] numsToAdd = numbers.split(",");
+        int sum = 0;
+        for(int i = 0; i < numsToAdd.length && i < 2; i++){
+            sum += Integer.parseInt(numsToAdd[i]);
+        }
+        return sum;
     }
 
     public static void main(String args[]){

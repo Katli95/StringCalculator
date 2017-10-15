@@ -7,7 +7,7 @@ public class stringCalc{
         }
         String[] numsToAdd = numbers.split(",");
         int sum = 0;
-        for(int i = 0; i < numsToAdd.length && i < 2; i++){
+        for(int i = 0; i < numsToAdd.length; i++){
             sum += Integer.parseInt(numsToAdd[i]);
         }
         return sum;

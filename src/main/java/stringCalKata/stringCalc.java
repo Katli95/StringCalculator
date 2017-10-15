@@ -7,7 +7,17 @@ public class stringCalc{
         if(numbers == ""){
             return 0;
         }
-        String[] numsToAdd = numbers.split("(\n|,)");
+        String possibleDelimeter ="";  
+        String splitString = "(\n|,)";
+        
+        if(numbers.startsWith("//")){
+            String[] numbersSplitOnNL = numbers.split("\n");
+            possibleDelimeter = numbersSplitOnNL[0].substring(2);
+            splitString = possibleDelimeter;
+            numbers = numbersSplitOnNL[1];
+        }
+
+        String[] numsToAdd = numbers.split(splitString);
         int sum = 0;
         ArrayList<Integer> negs = new ArrayList<Integer>();
         for(int i = 0; i < numsToAdd.length; i++){

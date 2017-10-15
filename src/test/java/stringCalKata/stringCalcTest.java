@@ -55,4 +55,8 @@ public class stringCalcTest{
     public void testOverOneThousand(){
         assertEquals(1003, stringCalc.add("1000,3,1003"));
     }
+    @Test
+    public void testCustomDelimiter(){
+        assertEquals(6, stringCalc.add("//;\n1;2;3"));
+    }
 }

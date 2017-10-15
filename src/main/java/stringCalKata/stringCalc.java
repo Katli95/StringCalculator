@@ -5,7 +5,7 @@ public class stringCalc{
         if(numbers == ""){
             return 0;
         }
-        String[] numsToAdd = numbers.split(",");
+        String[] numsToAdd = numbers.split("(\n|,)");
         int sum = 0;
         for(int i = 0; i < numsToAdd.length; i++){
             sum += Integer.parseInt(numsToAdd[i]);

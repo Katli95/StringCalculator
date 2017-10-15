@@ -1,6 +1,10 @@
 package stringCalKata;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import java.security.InvalidParameterException;
+
 import org.junit.Test;
 
 public class stringCalcTest{
@@ -24,5 +28,16 @@ public class stringCalcTest{
     @Test
     public void testCommaAndNewline(){
         assertEquals(6, stringCalc.add("1\n2,3"));
+    }
+    @Test
+    public void testThrownErrorForNeg(){
+        try{
+            stringCalc.add("-1\n2");
+            fail("Didn't throw error for first arg = -1");
+        }
+        catch(IllegalArgumentException expected){
+            if(expected.getMessage() != "Negatives not allowed: -1")
+                fail("Wrong error thrown for first arg = -1");
+        }
     }
 }

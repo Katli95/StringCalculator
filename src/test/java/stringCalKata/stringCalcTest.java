@@ -36,8 +36,19 @@ public class stringCalcTest{
             fail("Didn't throw error for first arg = -1");
         }
         catch(IllegalArgumentException expected){
-            if(!expected.getMessage().contains("Negatives not allowed: -1"))
-                fail(expected.getMessage());
+            if(!expected.getMessage().equals("Negatives not allowed: -1"))
+                fail("Threw incorrect error for first arg -1");
+        }
+    }
+    @Test
+    public void testThrownErrorForMultipleNeg(){
+        try{
+            stringCalc.add("-1,1,-2,2,-3,3");
+            fail("Didn't throw error for args: -1,-2,-3");
+        }
+        catch(IllegalArgumentException expected){
+            if(!expected.getMessage().equals("Negatives not allowed: -1,-2,-3"))
+                fail("Threw incorrect error for args: -1,-2,-3");
         }
     }
 }

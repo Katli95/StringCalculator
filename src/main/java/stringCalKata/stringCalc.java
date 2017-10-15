@@ -21,7 +21,14 @@ public class stringCalc{
 
         if(!negs.isEmpty()){
             String err = "Negatives not allowed: ";
-            err += negs.get(0);
+
+            for(int i = 0; i < negs.size(); i++){
+                err += negs.get(i);
+                if(i != negs.size() - 1){
+                    err+=",";
+                }
+            }
+
             throw new IllegalArgumentException(err);
         }
 

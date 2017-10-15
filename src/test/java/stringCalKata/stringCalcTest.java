@@ -8,11 +8,13 @@ public class stringCalcTest{
     @Test
     public void testEmptyString(){
         assertEquals(0, stringCalc.add(""));
-        assertEquals(1, stringCalc.add("1"));
-        assertEquals(3, stringCalc.add("1,2"));
     }
-
-    public static void main(String args[]){
-
+    @Test
+    public void testOneArgument(){
+        assertEquals(1, stringCalc.add("1"));
+    }
+    @Test
+    public void testTwoArguments(){
+        assertEquals(3, stringCalc.add("1,2"));
     }
 }

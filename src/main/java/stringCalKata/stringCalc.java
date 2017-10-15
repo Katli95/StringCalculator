@@ -14,7 +14,7 @@ public class stringCalc{
             int num = Integer.parseInt(numsToAdd[i]);
             if(num < 0){
                 negs.add(num);
-            }else{
+            }else if(num <= 1000){
                 sum += num;
             }
         }

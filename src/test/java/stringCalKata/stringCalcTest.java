@@ -51,4 +51,8 @@ public class stringCalcTest{
                 fail("Threw incorrect error for args: -1,-2,-3");
         }
     }
+    @Test
+    public void testOverOneThousand(){
+        assertEquals(1003, stringCalc.add("1000,3,1003"));
+    }
 }
